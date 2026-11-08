@@ -1,0 +1,32 @@
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f3f5fa;--card:#fff;--ink:#0f1a2b;--mut:#5d6a84;--line:#e3e8f0;--or:#f28c28;--or2:#c8600c;--cy:#22d3ee;--up:#12a372;--dn:#e5484d;--nav:#0a1220;
+--font:"Inter","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1220;--card:#121b2e;--ink:#e8eefb;--mut:#8b98b5;--line:#22304a;--up:#22c08a}}
+:root[data-theme="dark"]{--bg:#0b1220;--card:#121b2e;--ink:#e8eefb;--mut:#8b98b5;--line:#22304a;--up:#22c08a}
+html{scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*,*:before,*:after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased}
+body[data-view=boot],body[data-view=landing]{background:#0a0f18}
+[hidden]{display:none!important}
+button{font:inherit;cursor:pointer;border:0}
+.mono{font-variant-numeric:tabular-nums}
+.or{color:var(--or)}.cy{color:var(--cy)}.up{color:var(--up)}.dn{color:var(--dn)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:.03em;color:inherit;text-decoration:none}
+.logo svg{width:30px;height:30px;flex:none}
+.btn{padding:12px 22px;border-radius:6px;font-weight:600;transition:background .15s,border-color .15s}
+.b-or{background:var(--or2);color:#fff}.b-or:hover{background:#b45409}
+.b-ln{background:transparent;color:#e8eefb;border:1px solid #33425f}.b-ln:hover{border-color:#5a6a88}
+.b-wh{background:#fff;color:#0a1220}.b-wh:hover{background:#e7ecf4}
+.btn.full{display:block;width:100%;margin-top:12px}
+
+dialog{border:1px solid #1c2c48;border-radius:14px;background:#0d1728;color:#e8eefb;padding:26px;width:min(400px,92vw)}
+dialog::backdrop{background:#000a;backdrop-filter:blur(3px)}
+dialog h3{margin:0 0 6px;font-size:20px}
+dialog p{color:#9fb0cc;line-height:1.5}dialog .btn{display:block;width:100%;margin-top:10px;text-align:center}
+dialog a.btn{text-decoration:none}
+dialog form{margin:0}
+dialog .dsm{font-size:14px;margin:16px 0 4px;text-align:center}
+.lnk{background:none;color:var(--or);font-weight:600;padding:0;text-decoration:underline;text-underline-offset:3px}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom,0px));background:#0a1220;color:#fff;padding:11px 16px;border-radius:8px;z-index:30;font-size:14px;max-width:min(520px,90vw);box-shadow:0 8px 30px #0005;border:1px solid #22304a}
+:focus-visible{outline:2px solid var(--cy);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

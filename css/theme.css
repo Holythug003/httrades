@@ -1,0 +1,38 @@
+/* =========================================
+   Account indicator styles
+   Real  → currency flag
+   Demo / Guest → original coin
+   ========================================= */
+
+.flag-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  margin-right: 8px;
+}
+
+.flag-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flag-circle.real {
+  border-color: #f0f0f0;
+}
+
+/* Keep original coin colour from your theme */
+.coin {
+  color: #5fbfa3;
+}
+
+/* Warning style for real account */
+.warn.real {
+  border-left: 3px solid #ff444f;
+}

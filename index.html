@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HT TRADES · Deriv trading workspace</title>
+<meta name="description" content="Build, test and run Deriv trading bots. Bot Builder, Free and Premium Bots, Quick Bot, Signal AI, Bulk Trader, Manual Trader, Auto Trader, charts and analysis in one workspace.">
+<meta name="theme-color" content="#0f1724">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f28c28'/%3E%3Crect x='8' y='11' width='4' height='9' fill='%23fff'/%3E%3Crect x='14' y='13' width='4' height='8' fill='%233b1d04'/%3E%3Crect x='20' y='8' width='4' height='9' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/boot.css"><link rel="stylesheet" href="css/landing.css"><link rel="stylesheet" href="css/app.css"><link rel="stylesheet" href="css/pages.css"><link rel="stylesheet" href="css/theme.css">
+</head>
+<body data-view="boot">
+<section id="boot">
+ <div class="bbg" aria-hidden="true"><i class="glow g1"></i><i class="glow g2"></i><div class="bgrid"></div></div>
+ <div class="btk" aria-hidden="true"><div id="btk"></div></div>
+ <div class="bx">
+  <div class="brandlock"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#f28c28"/><path d="M10 6v20M16 9v15M22 5v18" stroke="#fff" stroke-width="1.5"/><rect x="8" y="11" width="4" height="9" fill="#fff"/><rect x="14" y="13" width="4" height="8" fill="#3b1d04"/><rect x="20" y="8" width="4" height="9" fill="#fff"/></svg><div><b>HT TRADES</b><span>Trading workspace for Deriv</span></div></div>
+  <div class="bchart"><div class="bch"><span><i class="ldot"></i>VOL 100 · 1m</span><span id="bpx">—</span></div><canvas id="bcv"></canvas></div>
+  <div class="bmeta"><span id="bst">Initialising workspace</span><span id="bpc">0%</span></div>
+  <div class="pb"><b id="bp"></b></div>
+  <div class="bfoot"><span>Demo mode is on by default</span><button id="skip">Skip</button></div>
+ </div>
+</section>
+
+<main id="landing" hidden>
+ <header class="ln"><div class="wd">
+  <a class="logo" href="#top" aria-label="HT TRADES home"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#f28c28"/><path d="M10 6v20M16 9v15M22 5v18" stroke="#fff" stroke-width="1.5"/><rect x="8" y="11" width="4" height="9" fill="#fff"/><rect x="14" y="13" width="4" height="8" fill="#3b1d04"/><rect x="20" y="8" width="4" height="9" fill="#fff"/></svg><span>HT <b class="or">TRADES</b></span></a>
+  <nav class="lk" id="lk"><a href="#platform">Platform</a><a href="#tools">Tools</a><a href="#markets">Markets</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="#risk">Risk</a><button class="mo" data-login>Log in</button><button class="mo" data-signup>Sign up</button></nav>
+  <div class="la"><button class="btn b-ln" data-login>Log in</button><button class="btn b-or" data-signup>Sign up</button><button class="mnu" id="mnu" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
+ </div></header>
+ <div class="tick" id="top"><div id="tk"></div></div>
+ <section class="wd hero tilebg-d">
+  <div>
+   <h1>Build, test and run Deriv trading bots in one workspace</h1>
+   <p>Assemble strategies from blocks, follow live market data, and practise on a demo account before you use real funds.</p>
+   <div class="cta"><button class="btn b-or" data-login>Log in with Deriv</button><button class="btn b-ln" data-go="app">Explore the demo</button></div>
+   <ul class="facts"><li>Demo account by default</li><li>Live Deriv market data</li><li>No coding required</li></ul>
+  </div>
+  <div class="pn">
+   <div class="ph"><div><b id="lcn"></b><span class="sub">1-minute candles</span></div><div class="pp"><b id="lcp"></b><span id="lcc"></span></div></div>
+   <div class="tabs" id="lt"></div>
+   <canvas id="hc"></canvas>
+   <div class="pf sub" id="lcs"></div>
+  </div>
+ </section>
+ <section class="sec wd" id="platform"><h2>Everything you need to run a strategy</h2><p class="lead">One workspace for building, testing and trading, so you spend your time on the strategy rather than the tooling.</p><div class="fg"><div><svg class="ico" viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 13h7v7h-7zM13 4h7v4h-7zM4 15h7v5H4z"/></svg><h3>Bot Builder</h3><p>Set trade parameters, a buy condition, limits and loss handling, then save, load and run.</p></div><div><svg class="ico" viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg><h3>Quick, Speed and Bulk</h3><p>Run a ready-made bot, trade every tick with Speed Bot, or place several contracts at once.</p></div><div><svg class="ico" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16M9 4v4M15 10v4M8 16v4"/></svg><h3>Manual Trader</h3><p>Trade contract by contract with the live chart beside you.</p></div><div><svg class="ico" viewBox="0 0 24 24"><path d="M8 8h11v11H8zM5 16V5h11"/></svg><h3>Copy Trading</h3><p>Follow the HT TRADES master account and mirror its trades.</p></div><div><svg class="ico" viewBox="0 0 24 24"><path d="M5 20V10M12 20V4M19 20v-7"/></svg><h3>Charts and analysis</h3><p>Live candles, digit statistics and signals calculated from real tick data.</p></div><div><svg class="ico" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6zM12 8v5M12 16h.01"/></svg><h3>Risk Calculator and Reports</h3><p>Size stakes before you run a bot, then review every settled contract and export it.</p></div></div></section>
+ <section class="sec wd" id="tools"><h2>The tools inside</h2><p class="lead">Every tab in the workspace, grouped by what you are trying to do.</p>
+  <div class="tl">
+   <div><b>Automate</b><p>Bot Builder · Quick Bot · Free Bots · Premium Bots · Auto Trader · Speed Lab</p></div>
+   <div><b>Trade by hand</b><p>Manual Trader · Bulk Trader · Copy Trading</p></div>
+   <div><b>Read the market</b><p>Charts · Analysis Tools · Signals · Signal AI</p></div>
+   <div><b>Stay in control</b><p>Risk Calculator · Reports · Tutorials</p></div>
+  </div></section>
+ <section class="sec wd" id="markets"><h2>Synthetic indices</h2><p class="lead">Prices stream from Deriv when connected. Change is measured over the last hour.</p>
+  <div class="tw"><table class="mk"><thead><tr><th>Index</th><th>Last price</th><th>1h change</th><th>1h trend</th></tr></thead><tbody id="mt"></tbody></table></div><p class="sub" id="mns" style="margin-top:10px"></p></section>
+ <section class="sec wd" id="how"><h2>How it works</h2><p class="lead">Go from login to a tested strategy in three steps.</p>
+  <div class="st"><div><span>Step 1</span><b>Log in with Deriv</b><p>Log in once with Deriv and come straight back. Your Deriv demo and real accounts appear here.</p></div><div><span>Step 2</span><b>Build or load a bot</b><p>Start from a free bot, import a file, or set up the blocks yourself.</p></div><div><span>Step 3</span><b>Test on demo, then go live</b><p>Run the strategy on a demo account first, and switch to real funds only when you choose to.</p></div></div></section>
+ <section class="sec wd" id="faq"><h2>Questions</h2><p class="lead">Short answers to what new users ask first.</p><div class="fq" id="lfq"></div></section>
+ <section class="sec wd" id="risk"><div class="rk"><b>Risk warning.</b> Deriv offers complex derivatives that can lose money rapidly. Demo results do not guarantee live performance. Trade only with money you can afford to lose.</div></section>
+ <section class="band tilebg-d"><h2>Start on a demo account</h2><p>Practise with 10,000 USD of virtual funds. No card needed.</p><div class="cta" style="justify-content:center"><button class="btn b-or" data-signup>Create a free account</button><button class="btn b-ln" data-go="app">Open the demo</button></div></section>
+ <footer class="wd lf">
+  <div class="lfg">
+   <div><a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#f28c28"/><rect x="8" y="11" width="4" height="9" fill="#fff"/><rect x="14" y="13" width="4" height="8" fill="#3b1d04"/><rect x="20" y="8" width="4" height="9" fill="#fff"/></svg><span>HT <b class="or">TRADES</b></span></a><p>An independent third-party tool built on the Deriv API. HT TRADES is not operated by Deriv.</p></div>
+   <div><b>Workspace</b><a href="#platform">Platform</a><a href="#tools">Tools</a><a href="#markets">Markets</a><a href="#faq">FAQ</a></div>
+   <div><b>Deriv</b><a href="https://deriv.com" target="_blank" rel="noopener">deriv.com</a><a href="https://app.deriv.com/account/api-token" target="_blank" rel="noopener">API token</a><a href="https://api.deriv.com" target="_blank" rel="noopener">Deriv API</a></div>
+   <div><b>Account</b><button data-login>Log in</button><button data-signup>Sign up</button><button data-go="app">Demo workspace</button></div>
+  </div>
+  <p class="lcopy">© <span id="yr">2026</span> HT TRADES. Trading derivatives carries a high risk of loss.</p>
+ </footer>
+</main>
+
+<div id="app" hidden>
+ <header class="appbar">
+  <a class="brand" href="#" data-go="landing" aria-label="HT TRADES home"><span class="bl"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#f28c28"/><path d="M10 6v20M16 9v15M22 5v18" stroke="#fff" stroke-width="1.5"/><rect x="8" y="11" width="4" height="9" fill="#fff"/><rect x="14" y="13" width="4" height="8" fill="#3b1d04"/><rect x="20" y="8" width="4" height="9" fill="#fff"/></svg></span><span class="bt"><b>HT TRADES</b></span></a>
+  <div class="acct"><button class="abtn" id="ab-btn" aria-label="Accounts" aria-expanded="false"><span class="coin" id="ak"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M11.5 9.5h5a6.5 6.5 0 0 1 0 13h-5zM8 13.5h7M8 18.5h7" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="abx"><small id="atg">Demo</small><b class="bal" id="ab">10,000.00 USD</b></span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button><button class="ic prof" id="pf" aria-label="Account menu"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M6.5 19c1.5-3 9.5-3 11 0"/></svg></button>
+   <div class="pop" id="pop" hidden><div class="at"><button data-t="real">Real</button><button data-t="demo" class="on">Demo</button></div><div class="pop-h" id="ph2"><span>Deriv accounts</span><svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg></div><div id="ad"></div><div class="pop-f" id="pft"></div><button class="lo" id="lgo"><span>Log out</span><svg viewBox="0 0 24 24"><path d="M10 4H5v16h5M14 8l4 4-4 4M18 12H9"/></svg></button></div></div>
+ </header>
+ <div class="nvw" id="nvw"><button class="nva l" id="nvl" aria-label="Scroll tabs left" tabindex="-1"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button><nav class="nv" id="nv" aria-label="Workspace"></nav><button class="nva r" id="nvr" aria-label="Scroll tabs right" tabindex="-1"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button></div>
+ <div class="tick2"><div id="tk2"></div></div>
+ <div class="warn" id="wn"></div>
+ <main class="wrap" id="pg"></main>
+ <footer class="dock">
+  <button class="risk-b" id="rk">Risk Disclaimer</button>
+  <div class="rg"><button class="run" id="rn"></button><label class="exec"><span><small>EXECUTION</small><b id="exv">SLOW</b></span><input type="checkbox" id="ext"><i></i></label><div class="bsb" id="bsb"><b id="bs">Bot is not running</b><span class="dots3"><i></i><i></i><i></i></span></div></div>
+  <div class="dr"><span class="dot" id="fdot"></span><span id="ck"></span><button class="ic" id="th" title="Toggle theme" aria-label="Toggle theme"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></button><button class="ic" id="lgx" title="Log out" aria-label="Log out"><svg viewBox="0 0 24 24"><path d="M10 4H5v16h5M14 8l4 4-4 4M18 12H9"/></svg></button><button class="ic" id="fsb" title="Fullscreen" aria-label="Fullscreen"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg></button></div>
+ </footer>
+ <button class="aib" id="ai" aria-label="Open assistant"><b>AI</b><i></i></button>
+ <aside class="help" id="help" hidden aria-label="AI market scanner">
+  <div class="hh"><b>AI Market Scanner</b><button class="ic" id="hx" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="htabs"><button type="button" data-ht="scan" class="on">Scanner</button><button type="button" data-ht="faq">Help</button></div>
+  <div class="hpane" id="hp-scan">
+   <div class="sch"><div class="rad" id="rad" aria-hidden="true"><i></i><i></i><i></i></div><div class="sct"><b id="scs">Ready</b><small id="sct">Scans every market for the strongest signal</small><span class="spr"><i id="scp"></i></span></div><button type="button" class="btn b-or" id="scr">Rescan</button></div>
+   <div class="scf" id="scf"></div>
+   <div class="scl2" id="scl2"></div>
+   <p class="scn">Based on recent tick frequencies. Synthetic markets are random, so a strong reading does not guarantee the next trade wins.</p>
+  </div>
+  <div class="hpane" id="hp-faq" hidden>
+   <div class="hs"><input id="hq" placeholder="Ask a question, e.g. martingale" autocomplete="off"></div>
+   <div class="hl" id="hl"></div>
+   <div class="hf"><button class="btn b-or full" data-page="Tutorials">Open tutorials</button></div>
+  </div>
+ </aside>
+ <div class="dwb" id="dwb" hidden></div>
+ <aside class="drw" id="dw" hidden aria-label="Menu"><div class="dwt"><span class="brand sm"><span class="bl"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#f28c28"/><path d="M10 6v20M16 9v15M22 5v18" stroke="#fff" stroke-width="1.5"/><rect x="8" y="11" width="4" height="9" fill="#fff"/><rect x="14" y="13" width="4" height="8" fill="#3b1d04"/><rect x="20" y="8" width="4" height="9" fill="#fff"/></svg></span><span class="bt"><b>HT TRADES</b></span></span><button class="ic" id="dwx" aria-label="Close menu"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div class="dwl" id="dwl"></div></aside>
+</div>
+<dialog id="lsetup"><h3>Deriv login is not connected yet</h3><p>Set your HT TRADES app ID (APP_ID) in <b>js/config.js</b>. In Deriv's app registration its redirect URL must be this site's address. Details are in the README.</p><button class="btn b-wh" data-go="app">Explore the demo instead</button><form method="dialog"><button class="btn b-ln">Close</button></form></dialog>
+<dialog id="sg"><h3>Create your account</h3><p>HT TRADES runs on your Deriv account. Sign up with Deriv for free, then come back here and log in.</p><a class="btn b-or" id="sgo" href="https://deriv.com/signup/" target="_blank" rel="noopener">Sign up on Deriv</a><button class="btn b-wh" data-go="app">Try the demo first</button><p class="dsm">Already have an account? <button class="lnk" data-login>Log in</button></p><form method="dialog"><button class="btn b-ln">Cancel</button></form></dialog>
+<dialog id="rkd"><h3>Risk disclaimer</h3><p>Deriv offers complex derivatives that carry a high risk of losing money rapidly. Demo results do not guarantee live performance. Only trade what you can afford to lose.</p><form method="dialog"><button class="btn b-or">I understand</button></form></dialog>
+<dialog id="cf"><h3>Switch to your real account?</h3><p>Contracts you buy on a real account use real money from your Deriv balance and carry a high risk of loss. Running bots stop when you switch.</p><button class="btn b-or" id="cfy">Switch to real</button><form method="dialog"><button class="btn b-ln">Cancel</button></form></dialog>
+<dialog id="qsd" class="wide"></dialog>
+<dialog id="gd" class="wide"></dialog>
+<div id="ovl" hidden><div class="ovb"><span class="spin"></span><b id="ovt"></b><small id="ovs"></small></div></div>
+<div id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="js/config.js"></script>
+<script src="js/oauth.js"></script>
+<script src="js/core.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/boot.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/deriv.js"></script>
+<script src="js/kit.js"></script>
+<script src="js/p1.js"></script>
+<script src="js/p2.js"></script>
+<script src="js/p3.js"></script>
+<script src="js/p4.js"></script>
+<script src="js/account.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/help.js"></script>
+<script src="js/feed.js"></script>
+</body>
+</html>
