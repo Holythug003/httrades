@@ -58,6 +58,7 @@ Object.assign(PG,{
   const redraw=()=>{$('wsi').innerHTML=bbBlocks();BBT()};
   $('bbqs').onclick=qsOpen;if(QSOPEN){QSOPEN=false;setTimeout(qsOpen,50)}
   $('bmh').onclick=()=>{$('bmb').hidden=!$('bmb').hidden;$('bmh').classList.toggle('shut',$('bmb').hidden)};
+  if(matchMedia('(max-width:820px)').matches){$('bmb').hidden=true;$('bmh').classList.add('shut')}
   $('bmq').oninput=e=>$('bml').innerHTML=bbMenu(e.target.value);
   $('bml').onclick=e=>{const c=e.target.closest('[data-cat]'),a=e.target.closest('[data-add]');
    if(a){const id=a.dataset.add;BB.opt.includes(id)?BB.opt=BB.opt.filter(x=>x!==id):BB.opt.push(id);bbSave();redraw();$('bml').innerHTML=bbMenu($('bmq').value);toast(BB.opt.includes(id)?OPTB[id]+' block added':OPTB[id]+' block removed');return}
